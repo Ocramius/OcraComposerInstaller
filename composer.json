@@ -1,7 +1,7 @@
 {
     "name": "ocramius/OcraComposerInstaller",
     "description": "Helper library that handles installation of ZendFramework modules with OcraComposer",
-    "type": "zendframework-module-installer",
+    "type": "composer-installer",
     "keywords": [
         "module",
         "zf2",
@@ -28,7 +28,10 @@
             "./"
         ]
     },
+    "scripts": {
+        "post-install-cmd": "OcraComposerInstaller\\Composer\\EventHandler::postInstall"
+    },
     "extra": {
-        "class": "OcraComposer\\Composer\\Installer"
+        "class": "OcraComposerInstaller\\Composer\\Installer"
     }
 }
