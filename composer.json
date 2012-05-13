@@ -1,6 +1,6 @@
 {
     "name": "ocramius/OcraComposerInstaller",
-    "description": "Helper library that handles installation of ZendFramework modules with OcraComposer",
+    "description": "Helper library that handles installation of OcraComposer, so that Zend\\Module\\Manager can load it",
     "type": "composer-installer",
     "keywords": [
         "module",
@@ -23,13 +23,7 @@
     "autoload": {
         "psr-0": {
             "OcraComposerInstaller": "src/"
-        },
-        "classmap": [
-            "./"
-        ]
-    },
-    "scripts": {
-        "post-install-cmd": "OcraComposerInstaller\\Composer\\EventHandler::postInstall"
+        }
     },
     "extra": {
         "class": "OcraComposerInstaller\\Composer\\Installer"
